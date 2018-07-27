@@ -5,9 +5,6 @@ import java.util.List;
 import static org.hamcrest.Matchers.equalTo;
 import org.openqa.selenium.WebDriver;
 
-import co.com.proyectobase.screenplay.model.Usuario;
-import co.com.proyectobase.screenplay.questions.SeMuestra;
-import co.com.proyectobase.screenplay.tasks.Diligenciar;
 import co.com.proyectobase.screenplay.tasks.Ingresar;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;

@@ -3,18 +3,20 @@ package co.com.proyectobase.screenplay.questions;
 import co.com.proyectobase.screenplay.ui.GoogleTraductorPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.Text;
+import net.serenitybdd.screenplay.questions.Value;
 
-public class LaRespuesta implements Question<String>{
+public class LaRespuesta implements Question<Boolean>{
 
 	public static LaRespuesta es() {
 		return new LaRespuesta();
 	}
 
 	@Override
-	public String answeredBy(Actor actor) {
+	public Boolean answeredBy(Actor actor) {
+		//return Text.of(GoogleTraductorPage.AREA_TRADUCIDA).viewedBy(actor).asString();
+		//return Value.of(GoogleTraductorPage.AREA_TRADUCIDA).viewedBy(actor).asString().;
+		return net.serenitybdd.screenplay.questions.Presence.of(GoogleTraductorPage.AREA_TRADUCIDA).viewedBy(actor).asBoolean();
 		
-		return Text.of(GoogleTraductorPage.AREA_TRADUCIDA).viewedBy(actor).asString();
 	}
 
 }
