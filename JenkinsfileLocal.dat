@@ -26,7 +26,7 @@ pipeline{
 							//sh aplica para servidor y bat para pruebas locales
 							//sh ("gradle clean test aggregate")
 							//bat 'gradle clean test aggregate'
-							bat "mvn clean test -Dtest=\"${APLICACION}\" test serenity:aggregate"
+							bat "mvn -Dtest=\"${APLICACION}\" test serenity:aggregate"
 						 	echo 'Ha ejecutado sin fallo hasta test junit'
 						}
 						catch(ex)
@@ -42,7 +42,7 @@ pipeline{
 				steps{
 					script{
 						try{
-							publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target\\site\\serenity', reportFiles: 'index.html', reportName: 'Plantilla', reportTitles: ''])
+							publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target\\site\\serenity_${timestamp}', reportFiles: 'index.html', reportName: 'Plantilla', reportTitles: ''])
 							echo 'Reporte Html realizado con exito'
 						}
 						catch(ex)
