@@ -1,17 +1,21 @@
 package co.com.proyectobase.screenplay.stepdefinitions;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.Matchers.equalTo;
+
 import java.util.List;
 
-import static org.hamcrest.Matchers.equalTo;
 import org.openqa.selenium.WebDriver;
 
+import co.com.proyectobase.screenplay.model.Usuario;
+import co.com.proyectobase.screenplay.questions.SeMuestra;
+import co.com.proyectobase.screenplay.tasks.Diligenciar;
 import co.com.proyectobase.screenplay.tasks.Ingresar;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.thucydides.core.annotations.Managed;
 
