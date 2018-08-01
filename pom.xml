@@ -83,6 +83,12 @@
     
     <build>
    
+  <resources>
+   <resource>
+    <directory>src/test/resources</directory>
+   </resource>
+  </resources>
+   
     
        <plugins>
           <plugin>

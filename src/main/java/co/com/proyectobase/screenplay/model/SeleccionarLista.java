@@ -1,4 +1,4 @@
-package co.com.proyectobase.screenplay.model;
+ package co.com.proyectobase.screenplay.model;
 
 import net.serenitybdd.screenplay.targets.Target;
 
