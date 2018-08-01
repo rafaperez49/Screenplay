@@ -103,6 +103,7 @@
                 <configuration>
                     <includes>
                         <include>**/*.java</include>
+                        <include>**/*.class</include>
                     </includes>
                     <argLine>-Xmx512m</argLine>
                     <systemPropertyVariables>
