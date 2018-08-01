@@ -68,7 +68,7 @@
     <build>
     <resources>
     	<resource>
-    		<directory>co.com.proyectobase.screenplay</directory>
+    		<directory>src/test/resources</directory>
     	</resource>
     </resources>
     
