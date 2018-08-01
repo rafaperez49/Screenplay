@@ -25,7 +25,7 @@ pipeline{
 						try{
 							//sh aplica para servidor y bat para pruebas locales
 							//sh ("gradle clean test aggregate")
-							bat 'gradle clean test aggregate'
+							//bat 'gradle clean test aggregate'
 							bat "mvn -Dtest=\"${APLICACION}\" test"
 						 	echo 'Ha ejecutado sin fallo hasta test junit'
 						}
