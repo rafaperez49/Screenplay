@@ -6,11 +6,11 @@ def timestamp = dateFormat.format(date).toString()
 
 pipeline{
 	//En el servidor se debe dejar activo el agent con label NodoWindows10Advance, de manera local agent any y el otro comentado
-	agent any
-	//agent
-	//{
-	//	label 'NodoWindows10Advance'
-	//}
+	//agent any
+	agent
+	{
+		label 'NodoWindows10Advance'
+	}
 
 	stages{
 		stage('Actualizar fuentes Nodo Windows') {
@@ -26,7 +26,7 @@ pipeline{
 							//sh aplica para servidor y bat para pruebas locales
 							//sh ("gradle clean test aggregate")
 							//bat 'gradle clean test aggregate'
-							bat "mvn -Dtest=\"${APLICACION}\" test serenity:aggregate"
+							sh "mvn -Dtest=\"${APLICACION}\" test serenity:aggregate"
 						 	echo 'Ha ejecutado sin fallo hasta test junit'
 						}
 						catch(ex)
@@ -57,7 +57,7 @@ pipeline{
 				steps{
 					script{
 						try{
-							bat "rename ${WORKSPACE}\\target\\site\\serenity serenity_${timestamp}"
+							sh "rename ${WORKSPACE}\\target\\site\\serenity serenity_${timestamp}"
 						 	echo 'Backup de evidencias realizado con exito'
 						}
 						catch(ex)
