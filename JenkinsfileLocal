@@ -13,17 +13,17 @@ pipeline{
 	//}
 	
 	stages{
-		stage('Actualizar fuentes Nodo Windows') {
+		stage('Act. Repositorio') {
 		 	steps{
 		 		git url: 'https://github.com/rafaperez49/Screenplay.git', credentialsId: 'rafaperez49', branch: 'master'
 			}
 		}
 
-		stage('Test_GUI_Junit'){
+		stage('Se lanza la prueba'){
 		
 				steps{
-				withMaven(maven : 'apache-maven-3.5.3')
-					script{
+				withMaven(maven : 'apache-maven-3.5.3'){
+				                    script{
 						try{
 							//sh aplica para servidor y bat para pruebas locales
 							//sh ("gradle clean test aggregate")
@@ -37,42 +37,13 @@ pipeline{
 	    					error('Failed')
 						}
 					}
+				                }
+
+					
+					
+					
 				}
 			}
-
-		stage('HtmlReport'){
-		
-				steps{
-					script{
-						try{
-							publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target\\site\\serenity_${timestamp}', reportFiles: 'index.html', reportName: 'Plantilla', reportTitles: ''])
-							echo 'Reporte Html realizado con exito'
-						}
-						catch(ex)
-						{    
-	    					echo 'Reporte Html realizado con Fallos'
-	    					error('Failed')
-						}
-					}
-				}
-			}			
-		stage('BackupEvidencias'){
-		
-				steps{
-					script{
-						try{
-							bat "rename ${WORKSPACE}\\target\\site\\serenity serenity_${timestamp}"
-						 	echo 'Backup de evidencias realizado con exito'
-						}
-						catch(ex)
-						{    
-	    					echo 'Backup de evidencias realizado con fallos'
-	    					error('Failed')
-						}
-					}
-				}
-			}
-
 
 		}	
 }
