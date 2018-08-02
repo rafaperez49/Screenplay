@@ -11,7 +11,7 @@ pipeline{
 	//{
 	//	label 'NodoWindows10Advance'
 	//}
-
+	
 	stages{
 		stage('Actualizar fuentes Nodo Windows') {
 		 	steps{
@@ -20,6 +20,9 @@ pipeline{
 		}
 
 		stage('Test_GUI_Junit'){
+		
+		withMaven(maven : 'maven3_5_3')
+		
 				steps{
 					script{
 						try{
@@ -39,6 +42,7 @@ pipeline{
 			}
 
 		stage('HtmlReport'){
+		
 				steps{
 					script{
 						try{
@@ -54,6 +58,7 @@ pipeline{
 				}
 			}			
 		stage('BackupEvidencias'){
+		
 				steps{
 					script{
 						try{
