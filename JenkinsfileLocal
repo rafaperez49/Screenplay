@@ -21,9 +21,8 @@ pipeline{
 
 		stage('Test_GUI_Junit'){
 		
-		withMaven(maven : 'maven3_5_3')
-		
 				steps{
+				withMaven(maven : 'maven3_5_3')
 					script{
 						try{
 							//sh aplica para servidor y bat para pruebas locales
