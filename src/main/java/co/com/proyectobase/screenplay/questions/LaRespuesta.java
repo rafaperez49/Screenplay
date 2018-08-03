@@ -3,7 +3,6 @@ package co.com.proyectobase.screenplay.questions;
 import co.com.proyectobase.screenplay.ui.GoogleTraductorPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.Value;
 
 public class LaRespuesta implements Question<Boolean>{
 

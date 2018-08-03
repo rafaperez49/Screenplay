@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.findby.By;
 
+@SuppressWarnings("deprecation")
 @DefaultUrl("http://www.google.com")
 public class GoogleHomePage extends PageObject{
 	

@@ -11,7 +11,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 public class Traducir implements Task{
 
 	private String palabra;
-	private GoogleHomePage g;
+	
 	
 	public Traducir(String palabra) {
 		this.palabra = palabra;

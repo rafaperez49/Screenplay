@@ -3,6 +3,7 @@ package co.com.proyectobase.screenplay.ui;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.findby.By;
 
+@SuppressWarnings("deprecation")
 public class GBFormularioChat {
 	
 	public static final Target TIPO_DOCUMENTO = Target.the("El tipo de documento").located(By.id("gcbChatTipo_title"));
