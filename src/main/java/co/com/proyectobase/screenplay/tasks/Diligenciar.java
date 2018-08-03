@@ -67,7 +67,7 @@ public class Diligenciar implements Task{
         new Actions(driver).moveToElement(input).click().perform();
 	}
 	
-	public void chulear(Actor actor)
+	  public void chulear(Actor actor)
 	{
 		JavascriptExecutor executor = (JavascriptExecutor)page.getDriver();
 		executor.executeScript("arguments[0].click()", AUTORIZACION.resolveFor(actor));
