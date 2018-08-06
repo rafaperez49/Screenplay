@@ -1,14 +1,7 @@
 package co.com.proyectobase.screenplay.tasks;
 
 import static co.com.proyectobase.screenplay.ui.GBFormularioChat.AUTORIZACION;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.BOTON_INICAR_SESION;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.CORREO;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.LISTA_PAIS;
 import static co.com.proyectobase.screenplay.ui.GBFormularioChat.LISTA_TI;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.NOMBRE;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.NUMERO_IDENTIFICACION;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.PAIS;
-import static co.com.proyectobase.screenplay.ui.GBFormularioChat.PETICION;
 import static co.com.proyectobase.screenplay.ui.GBFormularioChat.TIPO_DOCUMENTO;
 
 import java.util.List;
@@ -18,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import co.com.proyectobase.screenplay.model.SeleccionarLista;
+import co.com.proyectobase.screenplay.interactions.Seleccionar;
 import co.com.proyectobase.screenplay.model.Usuario;
 import co.com.proyectobase.screenplay.ui.GBPage;
 import co.com.proyectobase.screenplay.ui.GrupoBancolombiaPage;
@@ -27,7 +20,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 
 public class Diligenciar implements Task{
 
@@ -42,15 +34,17 @@ public class Diligenciar implements Task{
 		
 		actor.attemptsTo(Click.on(GBPage.BOTON_CHAT));
 		actor.attemptsTo(Click.on(TIPO_DOCUMENTO));
-		actor.attemptsTo(SeleccionarLista.desde(LISTA_TI).laOpcion(formulario.get(0).getTI()));
-		actor.attemptsTo(Enter.theValue(formulario.get(0).getNumeroIdentificacion()).into(NUMERO_IDENTIFICACION));
-		actor.attemptsTo(Click.on(PAIS));
-		actor.attemptsTo(SeleccionarLista.desde(LISTA_PAIS).laOpcion(formulario.get(0).getPais()));
-		actor.attemptsTo(Enter.theValue(formulario.get(0).getNombre()).into(NOMBRE));
-		actor.attemptsTo(Enter.theValue(formulario.get(0).getCorreo()).into(CORREO));
-		actor.attemptsTo(Enter.theValue(formulario.get(0).getPeticion()).into(PETICION));
-		selectCheck();
-		actor.attemptsTo(Click.on(BOTON_INICAR_SESION));
+		actor.attemptsTo(Seleccionar.laLista(LISTA_TI, formulario.get(0).getTI()));
+		
+//		
+//		actor.attemptsTo(Enter.theValue(formulario.get(0).getNumeroIdentificacion()).into(NUMERO_IDENTIFICACION));
+//		actor.attemptsTo(Click.on(PAIS));
+//		actor.attemptsTo(SeleccionarLista.desde(LISTA_PAIS).laOpcion(formulario.get(0).getPais()));
+//		actor.attemptsTo(Enter.theValue(formulario.get(0).getNombre()).into(NOMBRE));
+//		actor.attemptsTo(Enter.theValue(formulario.get(0).getCorreo()).into(CORREO));
+//		actor.attemptsTo(Enter.theValue(formulario.get(0).getPeticion()).into(PETICION));
+//		selectCheck();
+//		actor.attemptsTo(Click.on(BOTON_INICAR_SESION));
 	}
 
 	public static Diligenciar informacionNecesaria(List<Usuario> formulario) {

@@ -11,7 +11,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		features="src/test/resources/features/grupo_chat.feature",
 		tags= "@casoExitoso",
 		glue="co.com.proyectobase.screenplay.stepdefinitions",
-		snippets=SnippetType.CAMELCASE		)
+		snippets=SnippetType.CAMELCASE)
 public class RunnerTags {
 
 }
