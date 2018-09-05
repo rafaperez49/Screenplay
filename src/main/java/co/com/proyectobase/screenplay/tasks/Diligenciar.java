@@ -20,6 +20,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
 
 public class Diligenciar implements Task{
 
@@ -42,7 +43,7 @@ public class Diligenciar implements Task{
 //		actor.attemptsTo(SeleccionarLista.desde(LISTA_PAIS).laOpcion(formulario.get(0).getPais()));
 //		actor.attemptsTo(Enter.theValue(formulario.get(0).getNombre()).into(NOMBRE));
 //		actor.attemptsTo(Enter.theValue(formulario.get(0).getCorreo()).into(CORREO));
-//		actor.attemptsTo(Enter.theValue(formulario.get(0).getPeticion()).into(PETICION));
+//		actor.attemptsTo(Enter.theValue(formulario.get(0).getPeticion()).into(PETICION)); 
 //		selectCheck();
 //		actor.attemptsTo(Click.on(BOTON_INICAR_SESION));
 	}
@@ -54,7 +55,6 @@ public class Diligenciar implements Task{
 	}
 	
 	public void selectCheck() {
-		
 		
 		WebDriver driver = page.getDriver();
         WebElement input = driver.findElement(By.xpath("//*[@id=\'chat_form\']/div[4]/table/tbody/tr/td[1]/div"));

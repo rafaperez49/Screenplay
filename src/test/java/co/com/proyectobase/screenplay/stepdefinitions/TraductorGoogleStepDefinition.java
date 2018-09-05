@@ -30,7 +30,7 @@ public class TraductorGoogleStepDefinition {
 	
 	
 	@Given("^Que Rafa quiere usar el traductor de google$")
-	public void que_Rafa_quiere_usar_el_traductor_de_google()  {
+	public void que_Rafa_quiere_usar_el_traductor_de_google(){
 		rafa.wasAbleTo(Abrir.LaPaginaDeGoogle());
 	}
 
