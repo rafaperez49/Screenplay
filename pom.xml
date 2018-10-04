@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>co.com.proyectobase.screenplay</groupId>
-    <artifactId>co.com.proyectobase.screenplay</artifactId>
+    <groupId>co.com.proyectobase.screenplay.maxtime</groupId>
+    <artifactId>co.com.proyectobase.screenplay.maxtime</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -15,8 +15,8 @@
         <serenity.cucumber.version>1.6.6</serenity.cucumber.version>
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
-
-    <repositories>
+    
+     <repositories>
       <repository>
         <snapshots>
         <enabled>false</enabled>
@@ -63,9 +63,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
+    
     <build>
-        <plugins>
-            <plugin>
+    
+       <plugins>
+          <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>

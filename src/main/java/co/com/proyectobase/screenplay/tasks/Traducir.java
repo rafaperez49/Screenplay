@@ -22,8 +22,8 @@ public class Traducir implements Task{
 		
 		
 		actor.attemptsTo(Click.on(GoogleHomePage.BOTON_APLICACIONES));
-		g.getDriver().navigate().back();
-		actor.attemptsTo(Click.on(GoogleHomePage.BOTON_APLICACIONES));
+		//g.getDriver().navigate().back();
+		//actor.attemptsTo(Click.on(GoogleHomePage.BOTON_APLICACIONES));
 		actor.attemptsTo(Click.on(GoogleHomePage.BOTON_GOOGLE_TRANSLATE));
 		actor.attemptsTo(Click.on(GoogleTraductorPage.BOTON_LENGUAJE_ORIGEN));
 		actor.attemptsTo(Click.on(GoogleTraductorPage.OPCION_INGLES));

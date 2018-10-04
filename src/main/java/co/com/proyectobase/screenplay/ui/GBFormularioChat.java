@@ -16,9 +16,6 @@ public class GBFormularioChat {
 	public static final Target AUTORIZACION = Target.the("El tipo de documento").located(By.xpath("//*[@id=\'chat_form\']/div[4]/table/tbody/tr/td[1]/div/label"));
 	public static final Target BOTON_INICAR_SESION = Target.the("Botón para confirmar el acceso al Chat").located(By.id("gcbChatRegister"));
 	public static final Target BIENVENIDA_CHAT = Target.the("Mensaje de Bienvenida al Chat").located(By.xpath("/html/body/div[11]/div/div[2]/div/div[3]/div[2]/div/div/div[1]/div/table/tbody/tr/td"));
-	
-	
 	//*[@id='chat_form']/div//table/tbody/tr/td/div[@class='gwc-chat-check']
-	
 	
 }

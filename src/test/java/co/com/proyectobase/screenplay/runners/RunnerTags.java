@@ -8,8 +8,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features="src/test/resources/features/grupo_chat.feature",
-		tags= "@casoExitoso",
+		features="src/test/resources/features/traductorGoogle.feature",
+		tags= "@traducir",
 		glue="co.com.proyectobase.screenplay.stepdefinitions",
 		snippets=SnippetType.CAMELCASE		)
 public class RunnerTags {
